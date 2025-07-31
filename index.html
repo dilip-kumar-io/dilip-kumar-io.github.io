@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dilip Kumar - Portfolio</title>
+    
+    <!-- Material Design CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    
+    <!-- Font Awesome for Brand Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Background Audio -->
+    <audio id="backgroundMusic" loop preload="auto">
+        <source src="audio.mp3" type="audio/mpeg">
+        <!-- Fallback message -->
+        Your browser does not support the audio element.
+    </audio>
+    
+    <!-- Audio Control Button -->
+    <div id="audioControl" class="audio-control hidden">
+        <button id="audioToggle" class="audio-btn">
+            <i class="material-icons" id="audioIcon">volume_up</i>
+        </button>
+    </div>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loading-container">
+            <!-- Floating Geometric Shapes -->
+            <div class="floating-shape"></div>
+            <div class="floating-shape"></div>
+            <div class="floating-shape"></div>
+            <div class="floating-shape"></div>
+            
+            <!-- Pulsing Background Waves -->
+            <div class="bg-wave"></div>
+            <div class="bg-wave"></div>
+            
+            <!-- Circuit Lines -->
+            <div class="circuit-line"></div>
+            <div class="circuit-line"></div>
+            <div class="circuit-line"></div>
+            <div class="circuit-line"></div>
+            
+            <div class="loading-content">
+                <div class="loading-profile-image">
+                    <img src="pic.jpeg" alt="Dilip Kumar" class="profile-img">
+                    <div class="spark spark-1"></div>
+                    <div class="spark spark-2"></div>
+                    <div class="spark spark-3"></div>
+                </div>
+                <div id="welcome-text" class="welcome-text"></div>
+                <div class="loading-spinner">
+                    <div class="spinner"></div>
+                    <div class="ring"></div>
+                    <div class="ring"></div>
+                    <div class="ring"></div>
+                    <div class="ring"></div>
+                    <div class="loading-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progress-fill"></div>
+                        </div>
+                        <div class="loading-text" id="loading-text">Initializing...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Portfolio Content -->
+    <div id="portfolio-content" class="portfolio-hidden">
+        <!-- Particle Background -->
+        <div id="particles-js"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar-fixed">
+        <div class="nav-wrapper neon-nav">
+            <div class="navbar-container">
+                <a href="#" class="brand-logo neon-text">DK</a>
+                <a href="#" data-target="mobile-nav" class="sidenav-trigger">
+                    <i class="material-icons">menu</i>
+                </a>
+                <ul class="right hide-on-med-and-down navbar-menu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#education" class="nav-link">Education</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#certificates" class="nav-link">Certificates</a></li>
+                    <li><a href="#publications" class="nav-link">Publications</a></li>
+                    <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <ul class="sidenav" id="mobile-nav">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#certificates" class="nav-link">Certificates</a></li>
+        <li><a href="#publications" class="nav-link">Publications</a></li>
+        <li><a href="#achievements" class="nav-link">Achievements</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 center-align">
+                    <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+                        <h1 class="hero-title neon-text-blue glitch" data-text="DILIP KUMAR">DILIP KUMAR</h1>
+                        <div class="typing-container">
+                            <span class="typing-text"></span>
+                            <span class="cursor">|</span>
+                        </div>
+                        <p class="hero-subtitle pulse-animation" data-aos="fade-up" data-aos-delay="500">
+                            Senior Software Developer • 4+ Years Experience
+                        </p>
+                        <div class="hero-social-links" data-aos="fade-up" data-aos-delay="600">
+                            <a href="https://linkedin.com/in/dilipkumar15" target="_blank" class="social-link-hero neon-social-hero">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://github.com/dilipkary" target="_blank" class="social-link-hero neon-social-hero">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                        <div class="hero-buttons" data-aos="fade-up" data-aos-delay="700">
+                            <a href="#projects" class="btn neon-btn waves-effect waves-light">
+                                <i class="material-icons left">work</i>View Projects
+                            </a>
+                            <a href="#contact" class="btn btn-outline neon-btn-outline waves-effect">
+                                <i class="material-icons left">contact_mail</i>Contact Me
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Floating Elements -->
+        <div class="floating-elements">
+            <div class="float-1"></div>
+            <div class="float-2"></div>
+            <div class="float-3"></div>
+            <div class="float-4"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 center-align">
+                    <h2 class="section-title neon-text-cyan" data-aos="fade-down">About Me</h2>
+                    <div class="divider neon-divider" data-aos="zoom-in"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 m6" data-aos="fade-right">
+                    <div class="about-image-container">
+                        <div class="about-image neon-border">
+                            <img src="pic.jpeg" alt="Profile" class="responsive-img">
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6" data-aos="fade-left">
+                    <div class="about-content">
+                        <h4 class="neon-text-pink">Hello, I'm Dilip Kumar</h4>
+                        <p class="about-text">
+                            A passionate .NET Developer with 4+ years of experience in creating 
+                            innovative web applications and enterprise solutions. I specialize in .NET Core, 
+                            cloud technologies, and modern development practices.
+                        </p>
+                        <div class="about-stats">
+                            <div class="stat-item" data-aos="flip-left" data-aos-delay="100">
+                                <div class="stat-number neon-text-blue">10+</div>
+                                <div class="stat-label">Projects Completed</div>
+                            </div>
+                            <div class="stat-item" data-aos="flip-left" data-aos-delay="200">
+                                <div class="stat-number neon-text-cyan">4+</div>
+                                <div class="stat-label">Years Experience</div>
+                            </div>
+                            <div class="stat-item" data-aos="flip-left" data-aos-delay="300">
+                                <div class="stat-number neon-text-pink">5+</div>
+                                <div class="stat-label">Happy Clients</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section experience-section">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 center-align">
+                    <h2 class="section-title neon-text-blue" data-aos="fade-down">Professional Experience</h2>
+                    <div class="divider neon-divider" data-aos="zoom-in"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <div class="timeline">
+                        <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
+                            <div class="timeline-marker neon-marker-blue"></div>
+                            <div class="timeline-content neon-card">
+                                <div class="company-logo">
+                                    <i class="material-icons neon-text-blue">business</i>
+                                </div>
+                                <h5 class="neon-text-blue">Senior Software Developer</h5>
+                                <h6 class="company-name">Programming.com</h6>
+                                <span class="timeline-date neon-text-cyan">July 2025 - Present</span>
+                                <p>Leading Catalyst Identity Server bug fixes and migration projects. Developing scalable solutions using .NET Core 8, implementing AWS and Azure cloud services, and building robust CI/CD pipelines for automated deployment. Working with PostgreSQL databases for high-performance data management.</p>
+                                <div class="tech-stack">
+                                    <span class="chip neon-chip-small">.NET Core 8</span>
+                                    <span class="chip neon-chip-small">Identity Server</span>
+                                    <span class="chip neon-chip-small">AWS</span>
+                                    <span class="chip neon-chip-small">Azure</span>
+                                    <span class="chip neon-chip-small">PostgreSQL</span>
+                                    <span class="chip neon-chip-small">CI/CD</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item" data-aos="fade-left" data-aos-delay="200">
+                            <div class="timeline-marker neon-marker-cyan"></div>
+                            <div class="timeline-content neon-card">
+                                <div class="company-logo">
+                                    <i class="material-icons neon-text-cyan">laptop_mac</i>
+                                </div>
+                                <h5 class="neon-text-cyan">Dot Net Developer</h5>
+                                <h6 class="company-name">Amplifai</h6>
+                                <span class="timeline-date neon-text-pink">June 2025 - July 2025</span>
+                                <p>Migrating legacy applications to .NET Core stack for NHO Portal. Developing RESTful APIs, implementing JWT/OAuth authentication, and integrating payment gateways with microservices architecture.</p>
+                                <div class="tech-stack">
+                                    <span class="chip neon-chip-small">.NET Core</span>
+                                    <span class="chip neon-chip-small">React.js</span>
+                                    <span class="chip neon-chip-small">Azure</span>
+                                    <span class="chip neon-chip-small">Docker</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item" data-aos="fade-right" data-aos-delay="300">
+                            <div class="timeline-marker neon-marker-pink"></div>
+                            <div class="timeline-content neon-card">
+                                <div class="company-logo">
+                                    <i class="material-icons neon-text-pink">code</i>
+                                </div>
+                                <h5 class="neon-text-pink">Junior FullStack Engineer</h5>
+                                <h6 class="company-name">SIMPalm Tech India Pvt Limited</h6>
+                                <span class="timeline-date neon-text-purple">March 2025 - May 2025</span>
+                                <p>Modernized Finance Banking Portal from legacy stack to .NET Core. Built RESTful APIs, implemented authentication systems, and optimized database design with CI/CD deployment automation.</p>
+                                <div class="tech-stack">
+                                    <span class="chip neon-chip-small">.NET Core</span>
+                                    <span class="chip neon-chip-small">React.js</span>
+                                    <span class="chip neon-chip-small">SQL Server</span>
+                                    <span class="chip neon-chip-small">MongoDB</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item" data-aos="fade-left" data-aos-delay="400">
+                            <div class="timeline-marker neon-marker-purple"></div>
+                            <div class="timeline-content neon-card">
+                                <div class="company-logo">
+                                    <i class="material-icons neon-text-purple">analytics</i>
+                                </div>
+                                <h5 class="neon-text-purple">Senior Software Engineer</h5>
+                                <h6 class="company-name">Doppelio Technologies</h6>
+                                <span class="timeline-date neon-text-blue">September 2022 - November 2024</span>
+                                <p>Designed scalable .NET Core APIs improving platform efficiency by 25%. Optimized AWS resources achieving 40% cost savings and automated deployment pipelines reducing manual errors by 60%.</p>
+                                <div class="tech-stack">
+                                    <span class="chip neon-chip-small">.NET Core</span>
+                                    <span class="chip neon-chip-small">AWS</span>
+                                    <span class="chip neon-chip-small">React.js</span>
+                                    <span class="chip neon-chip-small">Python</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item" data-aos="fade-right" data-aos-delay="500">
+                            <div class="timeline-marker neon-marker-green"></div>
+                            <div class="timeline-content neon-card">
+                                <div class="company-logo">
+                                    <i class="material-icons neon-text-green">analytics</i>
+                                </div>
+                                <h5 class="neon-text-green">Associate Process Manager</h5>
+                                <h6 class="company-name">eClerx</h6>
+                                <span class="timeline-date neon-text-cyan">June 2021 - August 2022</span>
+                                <p>Built Asset Control Interface using Java/Groovy improving data processing by 30%. Developed ASP.NET Core Web APIs with SQL Server and optimized workflows with Python scripts.</p>
+                                <div class="tech-stack">
+                                    <span class="chip neon-chip-small">Java</span>
+                                    <span class="chip neon-chip-small">ASP.NET Core</span>
+                                    <span class="chip neon-chip-small">Python</span>
+                                    <span class="chip neon-chip-small">Oracle</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item" data-aos="fade-left" data-aos-delay="600">
+                            <div class="timeline-marker neon-marker-cyan"></div>
+                            <div class="timeline-content neon-card">
+                                <div class="company-logo">
+                                    <i class="material-icons neon-text-cyan">developer_mode</i>
+                                </div>
+                                <h5 class="neon-text-cyan">Junior .NET Developer</h5>
+                                <h6 class="company-name">Bitvivid Solutions</h6>
+                                <span class="timeline-date neon-text-pink">February 2019 - July 2019</span>
+                                <p>Developed smart surveillance system with ASP.NET Core APIs for real-time camera data processing. Built ANPR modules for traffic monitoring and integrated Kafka for event-driven data processing.</p>
+                                <div class="tech-stack">
+                                    <span class="chip neon-chip-small">ASP.NET Core</span>
+                                    <span class="chip neon-chip-small">Kafka</span>
+                                    <span class="chip neon-chip-small">Azure</span>
+                                    <span class="chip neon-chip-small">OpenCV</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section education-section">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 center-align">
+                    <h2 class="section-title neon-text-purple" data-aos="fade-down">Education</h2>
+                    <div class="divider neon-divider" data-aos="zoom-in"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <div class="timeline">
+                        <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
+                            <div class="timeline-marker neon-marker-blue"></div>
+                            <div class="timeline-content neon-card">
+                                <div class="company-logo">
+                                    <i class="material-icons neon-text-blue">school</i>
+                                </div>
+                                <h5 class="neon-text-blue">Master of Technology (M.Tech)</h5>
+                                <h6 class="company-name">Computer Science & Engineering</h6>
+                                <span class="timeline-date neon-text-cyan">2019 - 2021</span>
+                                <p>Dr BR Ambedkar National Institute of Technology, Jalandhar</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item" data-aos="fade-left" data-aos-delay="200">
+                            <div class="timeline-marker neon-marker-cyan"></div>
+                            <div class="timeline-content neon-card">
+                                <div class="company-logo">
+                                    <i class="material-icons neon-text-cyan">engineering</i>
+                                </div>
+                                <h5 class="neon-text-cyan">Bachelor of Engineering (B.E.)</h5>
+                                <h6 class="company-name">Computer Science & Engineering</h6>
+                                <span class="timeline-date neon-text-pink">2011 - 2015</span>
+                                <p>Medicap's Institute of Science & Technology, Indore</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills-section">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 center-align">
+                    <h2 class="section-title neon-text-blue" data-aos="fade-down">Skills & Technologies</h2>
+                    <div class="divider neon-divider" data-aos="zoom-in"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 m6 l3" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="skill-card neon-card">
+                        <div class="skill-icon">
+                            <i class="material-icons neon-text-blue">code</i>
+                        </div>
+                        <h5>Backend</h5>
+                        <div class="skill-list">
+                            <span class="chip neon-chip">.NET Core</span>
+                            <span class="chip neon-chip">C#</span>
+                            <span class="chip neon-chip">ASP.NET</span>
+                            <span class="chip neon-chip">Web API</span>
+                            <span class="chip neon-chip">Entity Framework</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l3" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="skill-card neon-card">
+                        <div class="skill-icon">
+                            <i class="material-icons neon-text-cyan">web</i>
+                        </div>
+                        <h5>Frontend</h5>
+                        <div class="skill-list">
+                            <span class="chip neon-chip">React.js</span>
+                            <span class="chip neon-chip">JavaScript</span>
+                            <span class="chip neon-chip">HTML5</span>
+                            <span class="chip neon-chip">CSS3</span>
+                            <span class="chip neon-chip">Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l3" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="skill-card neon-card">
+                        <div class="skill-icon">
+                            <i class="material-icons neon-text-pink">storage</i>
+                        </div>
+                        <h5>Database</h5>
+                        <div class="skill-list">
+                            <span class="chip neon-chip">SQL Server</span>
+                            <span class="chip neon-chip">MongoDB</span>
+                            <span class="chip neon-chip">PostgreSQL</span>
+                            <span class="chip neon-chip">Oracle</span>
+                            <span class="chip neon-chip">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l3" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="skill-card neon-card">
+                        <div class="skill-icon">
+                            <i class="material-icons neon-text-purple">cloud</i>
+                        </div>
+                        <h5>Cloud & DevOps</h5>
+                        <div class="skill-list">
+                            <span class="chip neon-chip">Azure</span>
+                            <span class="chip neon-chip">AWS</span>
+                            <span class="chip neon-chip">Docker</span>
+                            <span class="chip neon-chip">Kubernetes</span>
+                            <span class="chip neon-chip">CI/CD</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Skill Progress Bars -->
+            <div class="row skill-progress-section">
+                <div class="col s12 m6" data-aos="fade-right">
+                    <div class="skill-progress">
+                        <span>.NET Core</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill neon-progress" data-width="95%"></div>
+                        </div>
+                        <span class="percentage">95%</span>
+                    </div>
+                    <div class="skill-progress">
+                        <span>C#</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill neon-progress" data-width="90%"></div>
+                        </div>
+                        <span class="percentage">90%</span>
+                    </div>
+                    <div class="skill-progress">
+                        <span>React.js</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill neon-progress" data-width="85%"></div>
+                        </div>
+                        <span class="percentage">85%</span>
+                    </div>
+                </div>
+                <div class="col s12 m6" data-aos="fade-left">
+                    <div class="skill-progress">
+                        <span>SQL Server</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill neon-progress" data-width="85%"></div>
+                        </div>
+                        <span class="percentage">85%</span>
+                    </div>
+                    <div class="skill-progress">
+                        <span>Azure</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill neon-progress" data-width="80%"></div>
+                        </div>
+                        <span class="percentage">80%</span>
+                    </div>
+                    <div class="skill-progress">
+                        <span>AWS</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill neon-progress" data-width="75%"></div>
+                        </div>
+                        <span class="percentage">75%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects-section">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 center-align">
+                    <h2 class="section-title neon-text-pink" data-aos="fade-down">Featured Projects</h2>
+                    <div class="divider neon-divider" data-aos="zoom-in"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 m6 l4" data-aos="flip-up" data-aos-delay="100">
+                    <div class="project-card neon-card hoverable">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=250&fit=crop" 
+                                 alt="NHO Portal" class="responsive-img">
+                            <div class="project-overlay">
+                                <a href="#" class="btn-floating neon-btn-float">
+                                    <i class="material-icons">visibility</i>
+                                </a>
+                                <a href="#" class="btn-floating neon-btn-float">
+                                    <i class="material-icons">code</i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h5 class="neon-text-blue">NHO Portal</h5>
+                            <p>Legacy application migration to .NET Core with modern architecture. Features include RESTful APIs, JWT authentication, and payment gateway integration.</p>
+                            <div class="project-tech">
+                                <span class="chip neon-chip-small">.NET Core</span>
+                                <span class="chip neon-chip-small">React.js</span>
+                                <span class="chip neon-chip-small">Azure</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l4" data-aos="flip-up" data-aos-delay="200">
+                    <div class="project-card neon-card hoverable">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop" 
+                                 alt="Finance Banking Portal" class="responsive-img">
+                            <div class="project-overlay">
+                                <a href="#" class="btn-floating neon-btn-float">
+                                    <i class="material-icons">visibility</i>
+                                </a>
+                                <a href="#" class="btn-floating neon-btn-float">
+                                    <i class="material-icons">code</i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h5 class="neon-text-cyan">Finance Banking Portal</h5>
+                            <p>Comprehensive banking solution with .NET Core backend, React frontend, and multi-database support. Includes microservices architecture and CI/CD deployment.</p>
+                            <div class="project-tech">
+                                <span class="chip neon-chip-small">.NET Core</span>
+                                <span class="chip neon-chip-small">SQL Server</span>
+                                <span class="chip neon-chip-small">MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l4" data-aos="flip-up" data-aos-delay="300">
+                    <div class="project-card neon-card hoverable">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=250&fit=crop" 
+                                 alt="Smart Surveillance System" class="responsive-img">
+                            <div class="project-overlay">
+                                <a href="#" class="btn-floating neon-btn-float">
+                                    <i class="material-icons">visibility</i>
+                                </a>
+                                <a href="#" class="btn-floating neon-btn-float">
+                                    <i class="material-icons">code</i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h5 class="neon-text-pink">Smart Surveillance System</h5>
+                            <p>IoT-based surveillance system with real-time camera data processing, ANPR technology, and traffic violation detection using event-driven architecture.</p>
+                            <div class="project-tech">
+                                <span class="chip neon-chip-small">ASP.NET Core</span>
+                                <span class="chip neon-chip-small">Kafka</span>
+                                <span class="chip neon-chip-small">OpenCV</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 m6 l4" data-aos="flip-up" data-aos-delay="400">
+                    <div class="project-card neon-card hoverable">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1557821552-17105176677c?w=400&h=250&fit=crop" 
+                                 alt="Doppelio Web APIs" class="responsive-img">
+                            <div class="project-overlay">
+                                <a href="#" class="btn-floating neon-btn-float">
+                                    <i class="material-icons">visibility</i>
+                                </a>
+                                <a href="#" class="btn-floating neon-btn-float">
+                                    <i class="material-icons">code</i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h5 class="neon-text-purple">Doppelio Web APIs</h5>
+                            <p>Enhanced APIs for seamless integration with AWS services, improving platform functionality with S3, CloudWatch, and security features.</p>
+                            <div class="project-tech">
+                                <span class="chip neon-chip-small">.NET Core</span>
+                                <span class="chip neon-chip-small">AWS</span>
+                                <span class="chip neon-chip-small">RESTful APIs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l4" data-aos="flip-up" data-aos-delay="500">
+                    <div class="project-card neon-card hoverable">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400&h=250&fit=crop" 
+                                 alt="React.js Web App Optimization" class="responsive-img">
+                            <div class="project-overlay">
+                                <a href="#" class="btn-floating neon-btn-float">
+                                    <i class="material-icons">visibility</i>
+                                </a>
+                                <a href="#" class="btn-floating neon-btn-float">
+                                    <i class="material-icons">code</i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h5 class="neon-text-green">React.js Web App Optimization</h5>
+                            <p>Maintained and optimized a React.js web application, improving performance and user experience through advanced optimization techniques.</p>
+                            <div class="project-tech">
+                                <span class="chip neon-chip-small">React.js</span>
+                                <span class="chip neon-chip-small">RESTful APIs</span>
+                                <span class="chip neon-chip-small">Performance</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l4" data-aos="flip-up" data-aos-delay="600">
+                    <div class="project-card neon-card hoverable">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=250&fit=crop" 
+                                 alt="Dynamic IP Allocation" class="responsive-img">
+                            <div class="project-overlay">
+                                <a href="#" class="btn-floating neon-btn-float">
+                                    <i class="material-icons">visibility</i>
+                                </a>
+                                <a href="#" class="btn-floating neon-btn-float">
+                                    <i class="material-icons">code</i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h5 class="neon-text-orange">Dynamic IP Allocation</h5>
+                            <p>Auto assigning IP address allocation for ASG instances, boosting network efficiency and automated infrastructure management.</p>
+                            <div class="project-tech">
+                                <span class="chip neon-chip-small">AWS</span>
+                                <span class="chip neon-chip-small">Python</span>
+                                <span class="chip neon-chip-small">Shell Scripting</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 m6 l4" data-aos="flip-up" data-aos-delay="700">
+                    <div class="project-card neon-card hoverable">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=400&h=250&fit=crop" 
+                                 alt="Proto Builder" class="responsive-img">
+                            <div class="project-overlay">
+                                <a href="#" class="btn-floating neon-btn-float">
+                                    <i class="material-icons">visibility</i>
+                                </a>
+                                <a href="#" class="btn-floating neon-btn-float">
+                                    <i class="material-icons">code</i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h5 class="neon-text-blue">Proto Builder</h5>
+                            <p>Expanded a tool to mechanize DLL generation from .proto files, optimizing the build process and development workflow.</p>
+                            <div class="project-tech">
+                                <span class="chip neon-chip-small">C#</span>
+                                <span class="chip neon-chip-small">Windows Server</span>
+                                <span class="chip neon-chip-small">Protocol Buffers</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l4" data-aos="flip-up" data-aos-delay="800">
+                    <div class="project-card neon-card hoverable">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=400&h=250&fit=crop" 
+                                 alt="File Downloader" class="responsive-img">
+                            <div class="project-overlay">
+                                <a href="#" class="btn-floating neon-btn-float">
+                                    <i class="material-icons">visibility</i>
+                                </a>
+                                <a href="#" class="btn-floating neon-btn-float">
+                                    <i class="material-icons">code</i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h5 class="neon-text-cyan">File Downloader</h5>
+                            <p>Improved a utility to download various file formats (CSV, TXT, JSON) from servers with enhanced error handling and performance.</p>
+                            <div class="project-tech">
+                                <span class="chip neon-chip-small">C#</span>
+                                <span class="chip neon-chip-small">Python</span>
+                                <span class="chip neon-chip-small">AWS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l4" data-aos="flip-up" data-aos-delay="900">
+                    <div class="project-card neon-card hoverable">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=250&fit=crop" 
+                                 alt="AWS Deployment Automation" class="responsive-img">
+                            <div class="project-overlay">
+                                <a href="#" class="btn-floating neon-btn-float">
+                                    <i class="material-icons">visibility</i>
+                                </a>
+                                <a href="#" class="btn-floating neon-btn-float">
+                                    <i class="material-icons">code</i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h5 class="neon-text-pink">AWS Deployment Automation</h5>
+                            <p>Enhanced AWS infrastructure deployment, enhancing scalability and operational efficiency through automated CloudFormation processes.</p>
+                            <div class="project-tech">
+                                <span class="chip neon-chip-small">C#</span>
+                                <span class="chip neon-chip-small">Python</span>
+                                <span class="chip neon-chip-small">CloudFormation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 m6 l4" data-aos="flip-up" data-aos-delay="1000">
+                    <div class="project-card neon-card hoverable">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=400&h=250&fit=crop" 
+                                 alt="Certificate Converter" class="responsive-img">
+                            <div class="project-overlay">
+                                <a href="#" class="btn-floating neon-btn-float">
+                                    <i class="material-icons">visibility</i>
+                                </a>
+                                <a href="#" class="btn-floating neon-btn-float">
+                                    <i class="material-icons">code</i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h5 class="neon-text-purple">Certificate Converter</h5>
+                            <p>Enhanced an automated tool for converting PEM/PKCS certificates to PDF format with improved security and processing capabilities.</p>
+                            <div class="project-tech">
+                                <span class="chip neon-chip-small">Python</span>
+                                <span class="chip neon-chip-small">OpenSSL</span>
+                                <span class="chip neon-chip-small">Security</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l4" data-aos="flip-up" data-aos-delay="1100">
+                    <div class="project-card neon-card hoverable">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=250&fit=crop" 
+                                 alt="Secure HTTP Server" class="responsive-img">
+                            <div class="project-overlay">
+                                <a href="#" class="btn-floating neon-btn-float">
+                                    <i class="material-icons">visibility</i>
+                                </a>
+                                <a href="#" class="btn-floating neon-btn-float">
+                                    <i class="material-icons">code</i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h5 class="neon-text-green">Secure HTTP Server</h5>
+                            <p>Implemented a secure authentication server using digital certificates with SSL/TLS protocols for enhanced security.</p>
+                            <div class="project-tech">
+                                <span class="chip neon-chip-small">C#</span>
+                                <span class="chip neon-chip-small">.NET Core</span>
+                                <span class="chip neon-chip-small">SSL/TLS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l4" data-aos="flip-up" data-aos-delay="1200">
+                    <div class="project-card neon-card hoverable">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=400&h=250&fit=crop" 
+                                 alt="TCP & UDP Server for IoT" class="responsive-img">
+                            <div class="project-overlay">
+                                <a href="#" class="btn-floating neon-btn-float">
+                                    <i class="material-icons">visibility</i>
+                                </a>
+                                <a href="#" class="btn-floating neon-btn-float">
+                                    <i class="material-icons">code</i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h5 class="neon-text-orange">TCP & UDP Server for IoT</h5>
+                            <p>Expanded a TCP/UDP server for IoT device connection testing and validation with WebSocket support and protocol handling.</p>
+                            <div class="project-tech">
+                                <span class="chip neon-chip-small">Node.js</span>
+                                <span class="chip neon-chip-small">WebSockets</span>
+                                <span class="chip neon-chip-small">IoT Protocols</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="section certificates-section">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 center-align">
+                    <h2 class="section-title neon-text-cyan" data-aos="fade-down">Certificates</h2>
+                    <div class="divider neon-divider" data-aos="zoom-in"></div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Microsoft Certificates -->
+                <div class="col s12 m6 l4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="certificate-card neon-card">
+                        <div class="certificate-icon">
+                            <i class="fab fa-microsoft neon-text-blue"></i>
+                        </div>
+                        <h6 class="certificate-title">Microsoft Applied Skills</h6>
+                        <div class="certificate-list">
+                            <div class="certificate-item">
+                                <div class="certificate-item-title">Accelerate app development by using GitHub Copilot</div>
+                                <!--<div class="certificate-item-description">Accelerate app development by using GitHub Copilot</div>-->
+                            </div>
+                            <div class="certificate-item">
+                                <div class="certificate-item-title">Get started with classes, properties, and methods in C#</div>
+                                <!--<div class="certificate-item-description">Get started with classes, properties, and methods in C#</div>-->
+                            </div>
+                        </div>
+                        <div class="certificate-provider">Microsoft</div>
+                    </div>
+                </div>
+                
+                <!-- Coursera Certificates -->
+                <div class="col s12 m6 l4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="certificate-card neon-card">
+                        <div class="certificate-icon">
+                            <i class="material-icons neon-text-cyan">school</i>
+                        </div>
+                        <h6 class="certificate-title">Professional Certifications</h6>
+                        <div class="certificate-list">
+                            <div class="certificate-item">
+                                <div class="certificate-item-title">Google IT Automation</div>
+                                <div class="certificate-item-description">Python Specialization</div>
+                            </div>
+                            <div class="certificate-item">
+                                <div class="certificate-item-title">Machine Learning</div>
+                                <div class="certificate-item-description">Advanced machine learning concepts and applications</div>
+                            </div>
+                        </div>
+                        <div class="certificate-provider">Coursera</div>
+                    </div>
+                </div>
+                
+                <!-- Development Skills Certificates -->
+                <div class="col s12 m6 l4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="certificate-card neon-card">
+                        <div class="certificate-icon">
+                            <i class="material-icons neon-text-pink">code</i>
+                        </div>
+                        <h6 class="certificate-title">Development Skills</h6>
+                        <div class="certificate-list">
+                            <div class="certificate-item">
+                                <div class="certificate-item-title">Python Programming</div>
+                                <div class="certificate-item-description">Comprehensive Python programming course</div>
+                            </div>
+                            <div class="certificate-item">
+                                <div class="certificate-item-title">APIs & Microservices</div>
+                                <div class="certificate-item-description">Building scalable APIs and microservices</div>
+                            </div>
+                        </div>
+                        <div class="certificate-provider">Data Camp / Free Code Camp</div>
+                    </div>
+                </div>
+                
+                <!-- NIIT Certificate -->
+                <div class="col s12 m6 l4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="certificate-card neon-card">
+                        <div class="certificate-icon">
+                            <i class="fas fa-graduation-cap neon-text-purple"></i>
+                        </div>
+                        <h6 class="certificate-title">Professional Diploma</h6>
+                        <div class="certificate-list">
+                            <div class="certificate-item">
+                                <div class="certificate-item-title">Diploma in .NET Technologies</div>
+                                <div class="certificate-item-description">Comprehensive .NET development program with practical applications</div>
+                            </div>
+                        </div>
+                        <div class="certificate-provider">NIIT</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="section publications-section">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 center-align">
+                    <h2 class="section-title neon-text-purple" data-aos="fade-down">Publications</h2>
+                    <div class="divider neon-divider" data-aos="zoom-in"></div>
+                    <p class="section-subtitle" data-aos="fade-up">
+                        Research contributions to academic and professional communities
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Publication 1 -->
+                <div class="col s12 m6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="publication-card neon-card">
+                        <div class="publication-icon">
+                            <i class="material-icons neon-text-cyan">article</i>
+                        </div>
+                        <h6 class="publication-title">An Artificial Intelligence Approach for Expurgating Edible and Non-Edible Items</h6>
+                        <div class="publication-details">
+                            <div class="publication-journal">Digital Public Health</div>
+                            <div class="publication-year">2021</div>
+                        </div>
+                        <p class="publication-description">
+                            Research focused on developing AI-based classification systems to distinguish between edible and non-edible items, contributing to food safety and automated inspection systems.
+                        </p>
+                        <div class="publication-tags">
+                            <span class="neon-chip-small">Artificial Intelligence</span>
+                            <span class="neon-chip-small">Machine Learning</span>
+                            <span class="neon-chip-small">Food Safety</span>
+                            <span class="neon-chip-small">Classification</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Publication 2 -->
+                <div class="col s12 m6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="publication-card neon-card">
+                        <div class="publication-icon">
+                            <i class="material-icons neon-text-pink">psychology</i>
+                        </div>
+                        <h6 class="publication-title">Emotion Sentiment Analysis of Indian Twitter-Data of COVID-19 After Lockdown</h6>
+                        <div class="publication-details">
+                            <div class="publication-journal">IEEE</div>
+                            <div class="publication-year">2015</div>
+                        </div>
+                        <p class="publication-description">
+                            Comprehensive analysis of emotional sentiment patterns in Indian Twitter data during the COVID-19 pandemic post-lockdown period, utilizing natural language processing and sentiment analysis techniques.
+                        </p>
+                        <div class="publication-tags">
+                            <span class="neon-chip-small">Sentiment Analysis</span>
+                            <span class="neon-chip-small">NLP</span>
+                            <span class="neon-chip-small">Social Media</span>
+                            <span class="neon-chip-small">COVID-19</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements & Awards Section -->
+    <section id="achievements" class="section achievements-section">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 center-align">
+                    <h2 class="section-title neon-text-cyan" data-aos="fade-down">Achievements & Awards</h2>
+                    <div class="divider neon-divider" data-aos="zoom-in"></div>
+                    <p class="section-subtitle" data-aos="fade-up">
+                        Recognition for excellence and outstanding contributions
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Achievement 1 -->
+                <div class="col s12 m6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="achievement-card neon-card">
+                        <div class="achievement-icon">
+                            <i class="material-icons neon-text-cyan">military_tech</i>
+                        </div>
+                        <h6 class="achievement-title">Rajya Purashkar Award</h6>
+                        <div class="achievement-organization">Bharat Scout and Guide</div>
+                        <p class="achievement-description">
+                            Honored by Bharat Scout and Guide for outstanding contributions and achievements in community service, leadership, and social development initiatives.
+                        </p>
+                        <div class="achievement-tags">
+                            <span class="neon-chip-small">Leadership</span>
+                            <span class="neon-chip-small">Community Service</span>
+                            <span class="neon-chip-small">Social Impact</span>
+                            <span class="neon-chip-small">Recognition</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Achievement 2 -->
+                <div class="col s12 m6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="achievement-card neon-card">
+                        <div class="achievement-icon">
+                            <i class="fab fa-microsoft neon-text-pink"></i>
+                        </div>
+                        <h6 class="achievement-title">Microsoft Student Partner</h6>
+                        <div class="achievement-organization">Microsoft Corporation</div>
+                        <p class="achievement-description">
+                            Served as a Microsoft Student Partner, developing a Windows application and promoting Microsoft technologies within the academic community through workshops and technical sessions.
+                        </p>
+                        <div class="achievement-tags">
+                            <span class="neon-chip-small">Microsoft</span>
+                            <span class="neon-chip-small">Windows Development</span>
+                            <span class="neon-chip-small">Technical Leadership</span>
+                            <span class="neon-chip-small">Partnership</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 center-align">
+                    <h2 class="section-title neon-text-purple" data-aos="fade-down">Get In Touch</h2>
+                    <div class="divider neon-divider" data-aos="zoom-in"></div>
+                    <p class="section-subtitle" data-aos="fade-up">
+                        Let's work together to bring your ideas to life!
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 m6" data-aos="fade-right">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon neon-text-blue">
+                                <i class="material-icons">email</i>
+                            </div>
+                            <div class="contact-details">
+                                <h6>Email</h6>
+                                <p>dilip-kumar15@outlook.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon neon-text-cyan">
+                                <i class="material-icons">phone</i>
+                            </div>
+                            <div class="contact-details">
+                                <h6>Phone</h6>
+                                <p>+91 79744 282865</p>
+                                <p>+91 96850 54015</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon neon-text-pink">
+                                <i class="material-icons">location_on</i>
+                            </div>
+                            <div class="contact-details">
+                                <h6>Location</h6>
+                                <p>Indore, Madhya Pradesh</p>
+                                <p>India</p>
+                            </div>
+                        </div>
+                        <div class="social-links">
+                            <a href="#" class="social-link neon-social">
+                                <i class="material-icons">work</i>
+                            </a>
+                            <a href="#" class="social-link neon-social">
+                                <i class="material-icons">code</i>
+                            </a>
+                            <a href="#" class="social-link neon-social">
+                                <i class="material-icons">alternate_email</i>
+                            </a>
+                            <a href="#" class="social-link neon-social">
+                                <i class="material-icons">photo_camera</i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6" data-aos="fade-left">
+                    <form class="contact-form neon-form">
+                        <div class="input-field">
+                            <input id="name" type="text" class="validate">
+                            <label for="name" class="neon-label">Name</label>
+                        </div>
+                        <div class="input-field">
+                            <input id="email" type="email" class="validate">
+                            <label for="email" class="neon-label">Email</label>
+                        </div>
+                        <div class="input-field">
+                            <input id="subject" type="text" class="validate">
+                            <label for="subject" class="neon-label">Subject</label>
+                        </div>
+                        <div class="input-field">
+                            <textarea id="message" class="materialize-textarea"></textarea>
+                            <label for="message" class="neon-label">Message</label>
+                        </div>
+                        <button type="submit" class="btn neon-btn waves-effect waves-light">
+                            <i class="material-icons left">send</i>Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="page-footer neon-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 center-align">
+                    <p>&copy; 2025 Dilip Kumar. All rights reserved. Made with <span class="neon-text-pink">❤</span> and lots of <span class="neon-text-cyan">code</span>.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    </div> <!-- End of portfolio-content -->
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    
+    <!-- Loading Screen Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const welcomeTextElement = document.getElementById('welcome-text');
+            const portfolioContent = document.getElementById('portfolio-content');
+            const loadingScreen = document.querySelector('.loading-screen');
+            const progressFill = document.getElementById('progress-fill');
+            const loadingText = document.getElementById('loading-text');
+            
+            // Audio elements
+            const backgroundMusic = document.getElementById('backgroundMusic');
+            const audioControl = document.getElementById('audioControl');
+            const audioToggle = document.getElementById('audioToggle');
+            const audioIcon = document.getElementById('audioIcon');
+            
+            let isAudioPlaying = false;
+            let audioInitialized = false;
+            
+            const text = 'Welcome to my Portfolio';
+            let charIndex = 0;
+            let progress = 0;
+            
+            // Loading phases with realistic messages
+            const loadingPhases = [
+                { text: 'Initializing...', duration: 800 },
+                { text: 'Loading portfolio data...', duration: 1000 },
+                { text: 'Preparing interface...', duration: 600 },
+                { text: 'Setting up animations...', duration: 700 },
+                { text: 'Almost ready...', duration: 500 }
+            ];
+            
+            let currentPhase = 0;
+            
+            // Audio control functionality
+            function initializeAudio() {
+                if (!audioInitialized && backgroundMusic) {
+                    backgroundMusic.volume = 0.5; // Set comfortable volume
+                    audioInitialized = true;
+                }
+                return audioInitialized;
+            }
+            
+            function playBackgroundMusic() {
+                if (backgroundMusic && audioInitialized) {
+                    backgroundMusic.play().then(() => {
+                        isAudioPlaying = true;
+                        audioToggle.classList.add('playing');
+                        audioIcon.textContent = 'volume_up';
+                        audioToggle.classList.remove('muted');
+                    }).catch(error => {
+                        console.log('Audio play failed:', error);
+                    });
+                }
+            }
+            
+            function pauseBackgroundMusic() {
+                if (backgroundMusic) {
+                    backgroundMusic.pause();
+                    isAudioPlaying = false;
+                    audioToggle.classList.remove('playing');
+                    audioIcon.textContent = 'volume_off';
+                    audioToggle.classList.add('muted');
+                }
+            }
+            
+            function toggleAudio() {
+                if (isAudioPlaying) {
+                    pauseBackgroundMusic();
+                } else {
+                    initializeAudio();
+                    playBackgroundMusic();
+                }
+            }
+            
+            // Audio control event listener
+            audioToggle.addEventListener('click', toggleAudio);
+            
+            // Show audio control after loading completes
+            function showAudioControl() {
+                audioControl.classList.remove('hidden');
+                
+                // Auto-start music with user interaction
+                document.addEventListener('click', function autoPlay() {
+                    if (!audioInitialized) {
+                        initializeAudio();
+                        playBackgroundMusic();
+                        document.removeEventListener('click', autoPlay);
+                    }
+                }, { once: true });
+            }
+            
+            // Simulate realistic loading progress
+            function updateProgress() {
+                if (progress < 100) {
+                    // Realistic progress increments with varying speeds
+                    const increment = Math.random() * 15 + 5; // 5-20% increments
+                    progress = Math.min(progress + increment, 100);
+                    progressFill.style.width = progress + '%';
+                    
+                    // Update loading text based on progress
+                    if (currentPhase < loadingPhases.length) {
+                        const phase = loadingPhases[currentPhase];
+                        loadingText.textContent = phase.text;
+                        
+                        if (progress >= (currentPhase + 1) * 20) {
+                            currentPhase++;
+                        }
+                    }
+                    
+                    // Vary the timing for realism
+                    const nextUpdate = Math.random() * 300 + 100; // 100-400ms
+                    setTimeout(updateProgress, nextUpdate);
+                } else {
+                    loadingText.textContent = 'Ready!';
+                    setTimeout(startTyping, 500);
+                }
+            }
+            
+            function typeText() {
+                if (charIndex < text.length) {
+                    welcomeTextElement.textContent = text.substring(0, charIndex + 1) + '|';
+                    charIndex++;
+                    
+                    // Add some randomness to typing speed for realism
+                    const typingSpeed = Math.random() * 50 + 75; // 75-125ms
+                    setTimeout(typeText, typingSpeed);
+                } else {
+                    // Keep final cursor and wait before starting portfolio
+                    welcomeTextElement.textContent = text + '|';
+                    
+                    // Add completion effect
+                    loadingText.textContent = 'Welcome! Loading portfolio...';
+                    progressFill.style.width = '100%';
+                    
+                    setTimeout(() => {
+                        // Start fade out of loading screen
+                        loadingScreen.classList.add('fade-out');
+                        setTimeout(() => {
+                            portfolioContent.classList.remove('portfolio-hidden');
+                            loadingScreen.style.display = 'none';
+                            
+                            // Show audio control after loading completes
+                            showAudioControl();
+                            
+                        }, 400);
+                    }, 1500);
+                }
+            }
+            
+            function startTyping() {
+                loadingText.textContent = 'Generating welcome message...';
+                setTimeout(typeText, 300);
+            }
+            
+            // Start the realistic loading simulation
+            setTimeout(updateProgress, 500);
+        });
+    </script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
