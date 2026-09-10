@@ -2302,6 +2302,31 @@ body {
     margin-bottom: 30px;
 }
 
+.projects-section .projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.projects-section .projects-grid .col {
+    float: none;
+}
+
+.projects-section .projects-grid .latest-project {
+    order: -1;
+}
+
+.certificates-section .certificates-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.certificates-section .certificates-grid .col {
+    float: none;
+}
+
 .projects-section .col {
     margin-bottom: 30px;
 }
